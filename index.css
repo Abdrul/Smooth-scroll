@@ -24,6 +24,23 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
     color: #3b3b3b;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: lightslategrey;
+    height: 2px;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+    transform: scale(1);
+    /* width: 100%; */
 }
 
 section {
